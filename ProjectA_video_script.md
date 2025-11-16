@@ -12,18 +12,21 @@ Goal: Single person presents the project in an empty cinema. Minimal shots, clea
 - Shot: Over‑shoulder to laptop (cutaway) or remain on presenter.  
 - Voiceover (same speaker): “We use MovieLens data. From audience tags, TF‑IDF turns words into meaning, and LDA groups them into topics.”  
 - Overlay: 2–3 word clouds (`figures/topic_0_wordcloud.png` … choose best). Quick cross‑dissolves.  
-- Lower‑third: “Data: movies, ratings, tags, links”.
+- Lower‑third: “Data: movies=9,742 • ratings=100,836 • tags=3,683 • links”.
+ - Lower‑third (small, corner): “Downloaded from GroupLens via Python (urllib)”.
 
 21–38s — Building the network  
 - Shot: Presenter VO over a full‑screen network figure.  
 - Voiceover: “Each movie is a node. We connect nearest neighbors by semantic similarity to form a movie‑to‑movie graph.”  
 - Overlay: LCC network PNG (dark background). Add slow zoom (Ken Burns).  
-- On‑screen text: “Nodes=#### • Edges=#### • Avg degree=#.#” (fill from your run).
+- On‑screen text: “Nodes=1,572 • Edges=5,701 • Avg degree≈7.25 • Components=320”.
+ - On‑screen subtext (small): “Node attributes: title, genres, dominant topic • Edge weight: cosine similarity”.
 
 39–52s — What we see  
 - Shot: Presenter back on camera (medium).  
-- Voiceover: “Communities appear—genres, moods, eras—and some films act as bridges.”  
+- Voiceover: “Communities appear—genres, moods, eras—and some films act as bridges. The largest component has 1,161 movies with strong structure (modularity≈0.864; clustering≈0.41).”  
 - Overlay: Communities bar chart (quick 1–2s) then network colored by dominant topic.
+ - Cutaway (1s): Degree distribution log‑log plot — “right‑skewed”.
 
 53–60s — Close and next steps  
 - Shot: Presenter on camera.  
@@ -31,7 +34,7 @@ Goal: Single person presents the project in an empty cinema. Minimal shots, clea
 - End card: Project title + team names (2s).
 
 ### One‑speaker script (fits 60s)
-“What if movies aren’t just rated—but connected by ideas? We use MovieLens data. From audience tags, TF‑IDF turns words into meaning, and LDA reveals topics. Each film becomes a node; we connect nearest neighbors by semantic similarity to build a movie network. A structure emerges: communities—genres, moods, eras—and bridges that link them. Finally, we relate topic strength to network position to spot influential films. This is a map of cinema, drawn by audience language. Next, we’ll compare clusters and topics and explore how influence travels.”
+“What if movies aren’t just rated—but connected by ideas? We use MovieLens small—9,742 movies, 100,836 ratings, and 3,683 tags—downloaded from GroupLens using a simple Python script. From audience tags, TF‑IDF turns words into meaning, and LDA reveals topics like ‘sci‑fi/time travel’, ‘dark comedy’, or ‘twist endings’. Each film becomes a node with attributes like title, genres, and its dominant topic; edges link nearest neighbors by cosine similarity. The result: 1,572 tagged films, 5,701 edges, average degree about 7, with a right‑skewed degree distribution. The largest component holds 1,161 movies with clear community structure. Some topics align with central films—for example, a topic with words like ‘space, politics, animation’ is strongly tied to high‑degree nodes. This is a map of cinema, drawn by audience language. Next, we’ll compare clusters with topics and explore how influence travels.”
 
 ### Assets to prepare (from notebook)
 - Word clouds: pick 2–3 best from `figures/topic_*.png`.  

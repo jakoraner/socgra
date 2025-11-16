@@ -1,0 +1,30 @@
+# OS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.python-version
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment files
+.env
+*.env
+
+# Editors / IDE
+.vscode/
+.idea/
+
+# Data: ignore all data by default, but keep specific small CSV dataset
+# If you want to version small sample data later, adjust these rules
+data/**
+
+
